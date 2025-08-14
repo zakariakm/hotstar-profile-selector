@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Hotstar Auto Profile Selector",
+  "version": "1.0",
+  "description": "Automatically selects your default profile on Hotstar's profile selection page",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.hotstar.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.hotstar.com/in/onboarding/profile"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hotstar Auto Profile Selector"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+} 
